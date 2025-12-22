@@ -134,6 +134,50 @@ img {
     background-color: #9a2a30;
 }
 
+/* Menu Toggle - Hidden by default on desktop */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fefefe;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle span:nth-child(1) {
+    margin-bottom: 6px;
+}
+
+.menu-toggle span:nth-child(3) {
+    margin-top: 6px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
 /* ----------------------------------------
    Hero Section
    ---------------------------------------- */

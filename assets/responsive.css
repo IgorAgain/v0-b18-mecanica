@@ -1,77 +1,1498 @@
+/* ========================================
+   B18 Landing Page - Responsive CSS
+   Mobile First Enhancement
+   ======================================== */
+
+/* ========================================
+   BREAKPOINTS:
+   - 1600px: Large Desktop
+   - 1400px: Desktop
+   - 1200px: Large Tablet
+   - 992px: Tablet
+   - 768px: Large Mobile
+   - 576px: Mobile
+   - 360px: Small Mobile
+   ======================================== */
+
+/* ----------------------------------------
+   Large Desktop (max-width: 1600px)
+   ---------------------------------------- */
 @media (max-width: 1600px) {
     .header-container {
         max-width: 1300px;
-        padding: 0;
+        padding: 0 40px;
     }
 
     .hero-container {
         max-width: 1300px;
-        min-height: 75vh;
-        padding: 0;
-        width: 100%;
+        min-height: 70vh;
+        padding: 40px;
     }
 
     .servicos-container {
         max-width: 1300px;
-        padding: 0;
+        padding: 0 40px;
     }
 
     .sobre-container {
         max-width: 1300px;
-        padding: 0;
-        gap: 80px;
-    }
-
-    .sobre {
-        padding: 0 0 60px 0;
+        padding: 0 40px;
+        gap: 60px;
     }
 
     .avaliacoes-container {
         max-width: 1300px;
-        padding: 0;
+        padding: 0 40px;
     }
 
     .mapa-container {
         max-width: 1920px;
-        padding: 100px 120px 0;
+        padding: 80px 120px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 56px;
+    }
+
+    .hero-circle {
+        width: 480px;
+        height: 480px;
+        right: -120px;
     }
 }
 
+/* ----------------------------------------
+   Desktop (max-width: 1400px)
+   ---------------------------------------- */
 @media (max-width: 1400px) {
     .header-container {
         max-width: 1100px;
-        padding: 0;
+        padding: 0 30px;
     }
 
     .hero-container {
-        max-width: 1200px;
-        min-height: 75vh;
-        padding: 0;
-        width: 100%;
+        max-width: 1100px;
+        min-height: 65vh;
+        padding: 40px 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-circle {
+        width: 420px;
+        height: 420px;
+        right: -100px;
     }
 
     .servicos-container {
-        max-width: 1200px;
-        padding: 0;
+        max-width: 1100px;
+        padding: 0 30px;
+    }
+
+    .servicos-header h2 {
+        font-size: 40px;
     }
 
     .sobre-container {
         max-width: 1100px;
-        padding: 0;
-        gap: 80px;
+        padding: 0 30px;
+        gap: 50px;
     }
 
-    .sobre {
-        padding: 0 0 60px 0;
+    .sobre-texto h2 {
+        font-size: 40px;
     }
 
     .avaliacoes-container {
         max-width: 1100px;
-        padding: 0;
+        padding: 0 30px;
+    }
+
+    .avaliacoes-header h2 {
+        font-size: 40px;
     }
 
     .mapa-container {
-        max-width: 1920px;
-        padding: 90px 200px 0;
+        padding: 80px 80px 0;
+    }
+
+    .mapa-frame {
+        height: 500px;
+    }
+}
+
+/* ----------------------------------------
+   Large Tablet (max-width: 1200px)
+   ---------------------------------------- */
+@media (max-width: 1200px) {
+    .header-container {
+        padding: 0 24px;
+    }
+
+    .nav-list {
+        gap: 24px;
+    }
+
+    .nav-list a {
+        font-size: 14px;
+    }
+
+    .btn-header {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .hero-container {
+        padding: 30px 24px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-circle {
+        width: 380px;
+        height: 380px;
+        right: -80px;
+    }
+
+    .hero-image img {
+        right: -60px;
+    }
+
+    .servicos-container {
+        padding: 0 24px;
+    }
+
+    .servicos-header h2 {
+        font-size: 36px;
+    }
+
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .sobre-container {
+        padding: 0 24px;
+        gap: 40px;
+    }
+
+    .sobre-texto h2 {
+        font-size: 36px;
+    }
+
+    .sobre-card h3 {
+        font-size: 20px;
+    }
+
+    .avaliacoes-container {
+        padding: 0 24px;
+    }
+
+    .avaliacoes-header h2 {
+        font-size: 36px;
+    }
+
+    .carrossel-wrapper {
+        margin: 0 -24px;
+        padding: 0 24px;
+    }
+
+    .mapa-container {
+        padding: 60px 24px 0;
+    }
+
+    .mapa-frame {
+        height: 450px;
+    }
+
+    .mapa-endereco p {
+        font-size: 16px;
+    }
+}
+
+/* ----------------------------------------
+   Tablet (max-width: 992px)
+   ---------------------------------------- */
+@media (max-width: 992px) {
+    /* Header - Mobile Nav Toggle */
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(7, 6, 7, 0.98);
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .nav-list a {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .btn-header {
+        display: none;
+    }
+
+    /* Menu Hamburger */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 1001;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background-color: #fefefe;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle span:nth-child(1) {
+        margin-bottom: 6px;
+    }
+
+    .menu-toggle span:nth-child(3) {
+        margin-top: 6px;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Close Button */
+    .nav-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: none;
+    }
+
+    .nav.active .nav-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-close svg {
+        width: 32px;
+        height: 32px;
+        fill: #fefefe;
+    }
+
+    /* Hero Section */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        order: 1;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+        margin: 0 auto 24px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: 0;
+        margin-bottom: 30px;
+        min-height: 300px;
+    }
+
+    .hero-circle {
+        width: 300px;
+        height: 300px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .hero-image img {
+        position: relative;
+        right: auto;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Serviços */
+    .servicos {
+        padding: 60px 0;
+    }
+
+    .servicos-container {
+        padding: 0 20px;
+    }
+
+    .servicos-header {
+        margin-bottom: 40px;
+    }
+
+    .servicos-header h2 {
+        font-size: 28px;
+    }
+
+    .servicos-header p {
+        font-size: 14px;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .servico-card-img img {
+        height: 200px;
+    }
+
+    /* Mapa */
+    .mapa-container {
+        padding: 40px 20px 0;
+    }
+
+    .mapa-frame {
+        height: 350px;
+    }
+
+    .mapa-endereco {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .mapa-endereco p {
+        font-size: 14px;
+    }
+
+    /* Sobre */
+    .sobre {
+        padding: 60px 0;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .sobre-texto {
+        text-align: center;
+    }
+
+    .sobre-texto h2 {
+        font-size: 32px;
+    }
+
+    .sobre-social {
+        justify-content: center;
+    }
+
+    .sobre-cards {
+        width: 100%;
+    }
+
+    /* Avaliações */
+    .avaliacoes {
+        padding: 60px 0;
+    }
+
+    .avaliacoes-container {
+        padding: 0 20px;
+    }
+
+    .avaliacoes-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .avaliacoes-header h2 {
+        font-size: 28px;
+    }
+
+    .avaliacao-card {
+        flex: 0 0 calc(100% - 40px);
+        max-width: calc(100% - 40px);
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .carrossel-wrapper {
+        margin: 0 -20px;
+        padding: 0 20px;
+    }
+
+    .avaliacoes-controles {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    /* WhatsApp */
+    .whatsapp {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* ----------------------------------------
+   Large Mobile (max-width: 768px)
+   ---------------------------------------- */
+@media (max-width: 768px) {
+    /* Marquee */
+    .marquee {
+        padding: 8px 0;
+    }
+
+    .marquee-content span {
+        font-size: 12px;
+    }
+
+    /* Header */
+    .header {
+        padding: 15px 0;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    /* Hero */
+    .hero-content h1 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .btn-contratar,
+    .btn-outline {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .hero-image {
+        min-height: 250px;
+    }
+
+    .hero-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-image img {
+        max-width: 320px;
+    }
+
+    /* Serviços */
+    .servicos {
+        padding: 50px 0;
+    }
+
+    .section-tag {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+
+    .servicos-header h2 {
+        font-size: 24px;
+    }
+
+    .servicos-header p {
+        font-size: 13px;
+    }
+
+    .servico-card-content h3 {
+        font-size: 18px;
+    }
+
+    .servico-card-content ul li {
+        font-size: 12px;
+    }
+
+    .btn-card {
+        font-size: 13px;
+        padding: 8px 18px;
+    }
+
+    /* Mapa */
+    .mapa-frame {
+        height: 300px;
+    }
+
+    .mapa-wrapper {
+        border-radius: 12px;
+        border-top: 6px solid #812328;
+    }
+
+    .mapa-endereco {
+        margin-top: 20px;
+    }
+
+    .mapa-endereco p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* Sobre */
+    .sobre {
+        padding: 50px 0;
+    }
+
+    .sobre-texto h2 {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .sobre-texto p {
+        font-size: 14px;
+    }
+
+    .sobre-card {
+        padding: 24px;
+    }
+
+    .sobre-card h3 {
+        font-size: 18px;
+    }
+
+    .sobre-card p {
+        font-size: 13px;
+    }
+
+    .valor-tag {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
+    .social-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-btn svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    /* Avaliações */
+    .avaliacoes {
+        padding: 50px 0;
+    }
+
+    .avaliacoes-header h2 {
+        font-size: 24px;
+    }
+
+    .avaliacoes-header-left p {
+        font-size: 14px;
+    }
+
+    .avaliacao-card h4 {
+        font-size: 18px;
+    }
+
+    .avaliacao-card > p {
+        font-size: 13px;
+    }
+
+    .autor-nome {
+        font-size: 14px;
+    }
+
+    .autor-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .estrelas svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .rating-numero {
+        font-size: 13px;
+    }
+
+    .seta-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .seta-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .btn-contratar {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
+
+/* ----------------------------------------
+   Mobile (max-width: 576px)
+   ---------------------------------------- */
+@media (max-width: 576px) {
+    /* Header */
+    .header {
+        padding: 12px 0;
+    }
+
+    .header-container {
+        padding: 0 16px;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    /* Hero */
+    .hero-container {
+        padding: 30px 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .btn-contratar,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+        padding: 14px 24px;
+    }
+
+    .hero-image {
+        min-height: 220px;
+        margin-bottom: 20px;
+    }
+
+    .hero-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-image img {
+        max-width: 280px;
+    }
+
+    /* Serviços */
+    .servicos {
+        padding: 40px 0;
+    }
+
+    .servicos-container {
+        padding: 0 16px;
+    }
+
+    .servicos-header {
+        margin-bottom: 30px;
+    }
+
+    .section-tag {
+        padding: 8px 16px;
+        font-size: 11px;
+        margin-bottom: 16px;
+    }
+
+    .servicos-header h2 {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    .servicos-header p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .servicos-grid {
+        max-width: 100%;
+    }
+
+    .servico-card {
+        border-radius: 10px;
+    }
+
+    .servico-card-img {
+        padding: 10px 10px 0 10px;
+    }
+
+    .servico-card-img img {
+        height: 180px;
+        border-radius: 6px;
+    }
+
+    .servico-card-content {
+        padding: 16px;
+    }
+
+    .servico-card-content h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .servico-card-content ul {
+        margin-bottom: 16px;
+    }
+
+    .servico-card-content ul li {
+        font-size: 12px;
+        padding-left: 14px;
+        margin-bottom: 6px;
+    }
+
+    .btn-card {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    /* Mapa */
+    .mapa-container {
+        padding: 30px 16px 0;
+    }
+
+    .mapa-frame {
+        height: 280px;
+    }
+
+    .mapa-wrapper {
+        border-radius: 10px;
+        border-top: 5px solid #812328;
+    }
+
+    .mapa-endereco svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .mapa-endereco p {
+        font-size: 12px;
+    }
+
+    /* Sobre */
+    .sobre {
+        padding: 40px 0;
+    }
+
+    .sobre-container {
+        padding: 0 16px;
+        gap: 30px;
+    }
+
+    .sobre-texto h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .sobre-texto p {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+
+    .sobre-social {
+        margin-top: 24px;
+    }
+
+    .social-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .social-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .sobre-card {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .sobre-card-linha {
+        left: 20px;
+        width: 50px;
+        height: 3px;
+    }
+
+    .sobre-card h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .sobre-card p {
+        font-size: 12px;
+    }
+
+    .valores-tags {
+        gap: 8px;
+    }
+
+    .valor-tag {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    /* Avaliações */
+    .avaliacoes {
+        padding: 40px 0;
+    }
+
+    .avaliacoes-container {
+        padding: 0 16px;
+    }
+
+    .avaliacoes-header {
+        margin-bottom: 30px;
+    }
+
+    .avaliacoes-header h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .avaliacoes-header-left p {
+        font-size: 13px;
+    }
+
+    .carrossel-wrapper {
+        margin: 0 -16px;
+        padding: 0 16px;
+    }
+
+    .avaliacao-card {
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .avaliacao-card-borda {
+        border-left: 6px solid #812328;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .avaliacao-card h4 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .avaliacao-card > p {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+    .avaliacao-autor {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .autor-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .autor-nome {
+        font-size: 13px;
+    }
+
+    .autor-rating {
+        gap: 6px;
+    }
+
+    .estrelas svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .rating-numero {
+        font-size: 12px;
+    }
+
+    .avaliacoes-controles {
+        margin-top: 30px;
+    }
+
+    .controles-setas {
+        gap: 12px;
+    }
+
+    .seta-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .seta-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .btn-contratar {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+
+    /* WhatsApp */
+    .whatsapp {
+        width: 50px;
+        height: 50px;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .whatsapp svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* ----------------------------------------
+   Small Mobile (max-width: 360px)
+   ---------------------------------------- */
+@media (max-width: 360px) {
+    /* Header */
+    .header-container {
+        padding: 0 12px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .menu-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-toggle span {
+        width: 24px;
+        height: 2px;
+    }
+
+    /* Hero */
+    .hero-container {
+        padding: 24px 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .btn-contratar,
+    .btn-outline {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+
+    .hero-image {
+        min-height: 180px;
+    }
+
+    .hero-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-image img {
+        max-width: 240px;
+    }
+
+    /* Serviços */
+    .servicos {
+        padding: 32px 0;
+    }
+
+    .servicos-container {
+        padding: 0 12px;
+    }
+
+    .servicos-header {
+        margin-bottom: 24px;
+    }
+
+    .section-tag {
+        padding: 6px 14px;
+        font-size: 10px;
+        margin-bottom: 12px;
+    }
+
+    .servicos-header h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .servicos-header p {
+        font-size: 12px;
+    }
+
+    .servico-card-img img {
+        height: 160px;
+    }
+
+    .servico-card-content {
+        padding: 14px;
+    }
+
+    .servico-card-content h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .servico-card-content ul li {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .btn-card {
+        font-size: 11px;
+        padding: 8px 16px;
+    }
+
+    /* Mapa */
+    .mapa-container {
+        padding: 24px 12px 0;
+    }
+
+    .mapa-frame {
+        height: 240px;
+    }
+
+    .mapa-wrapper {
+        border-top: 4px solid #812328;
+    }
+
+    .mapa-endereco {
+        margin-top: 16px;
+    }
+
+    .mapa-endereco svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .mapa-endereco p {
+        font-size: 11px;
+    }
+
+    /* Sobre */
+    .sobre {
+        padding: 32px 0;
+    }
+
+    .sobre-container {
+        padding: 0 12px;
+        gap: 24px;
+    }
+
+    .sobre-texto h2 {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    .sobre-texto p {
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+
+    .sobre-social {
+        margin-top: 20px;
+        gap: 12px;
+    }
+
+    .social-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .sobre-card {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .sobre-card-linha {
+        left: 16px;
+        width: 40px;
+    }
+
+    .sobre-card h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .sobre-card p {
+        font-size: 11px;
+    }
+
+    .valores-tags {
+        gap: 6px;
+    }
+
+    .valor-tag {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    /* Avaliações */
+    .avaliacoes {
+        padding: 32px 0;
+    }
+
+    .avaliacoes-container {
+        padding: 0 12px;
+    }
+
+    .avaliacoes-header {
+        margin-bottom: 24px;
+    }
+
+    .avaliacoes-header h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .avaliacoes-header-left p {
+        font-size: 12px;
+    }
+
+    .carrossel-wrapper {
+        margin: 0 -12px;
+        padding: 0 12px;
+    }
+
+    .carrossel-track {
+        gap: 16px;
+    }
+
+    .avaliacao-card {
+        flex: 0 0 calc(100% - 16px);
+        max-width: calc(100% - 16px);
+        padding: 16px;
+    }
+
+    .avaliacao-card-borda {
+        border-left: 5px solid #812328;
+    }
+
+    .avaliacao-card h4 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .avaliacao-card > p {
+        font-size: 11px;
+        line-height: 1.5;
+        margin-bottom: 14px;
+    }
+
+    .avaliacao-autor {
+        gap: 8px;
+    }
+
+    .autor-avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .autor-nome {
+        font-size: 12px;
+    }
+
+    .autor-rating {
+        gap: 4px;
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 8px;
+    }
+
+    .estrelas svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .rating-numero {
+        font-size: 11px;
+    }
+
+    .avaliacoes-controles {
+        margin-top: 24px;
+        gap: 16px;
+    }
+
+    .controles-setas {
+        gap: 10px;
+    }
+
+    .seta-btn {
+        width: 38px;
+        height: 38px;
+        border-width: 1.5px;
+    }
+
+    .seta-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .btn-contratar {
+        padding: 10px 24px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+    /* WhatsApp */
+    .whatsapp {
+        width: 46px;
+        height: 46px;
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .whatsapp svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Nav Mobile */
+    .nav-list a {
+        font-size: 20px;
+    }
+}
+
+/* ----------------------------------------
+   Menu Toggle - Base Styles (Hidden by default)
+   ---------------------------------------- */
+.menu-toggle {
+    display: none;
+}
+
+/* ----------------------------------------
+   Utility Classes for Mobile
+   ---------------------------------------- */
+@media (max-width: 992px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+@media (min-width: 993px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+
+/* ----------------------------------------
+   Touch Improvements
+   ---------------------------------------- */
+@media (hover: none) and (pointer: coarse) {
+    .btn-contratar:active,
+    .btn-outline:active,
+    .btn-card:active,
+    .btn-header:active {
+        transform: scale(0.98);
+    }
+
+    .servico-card:hover {
+        transform: none;
+    }
+
+    .social-btn:active {
+        transform: scale(0.95);
+    }
+
+    .seta-btn:active {
+        background-color: #fefefe;
+        color: #070607;
+    }
+}
+
+/* ----------------------------------------
+   Landscape Mobile Adjustments
+   ---------------------------------------- */
+@media (max-width: 992px) and (orientation: landscape) {
+    .hero-container {
+        flex-direction: row;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .hero-content {
+        order: 0;
+        text-align: left;
+    }
+
+    .hero-buttons {
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .hero-image {
+        order: 1;
+        margin-bottom: 0;
+        min-height: 200px;
+    }
+
+    .hero-circle {
+        width: 200px;
+        height: 200px;
+        right: 0;
+        transform: none;
+    }
+
+    .hero-image img {
+        max-width: 250px;
+    }
+
+    .nav {
+        height: 100vh;
+        padding: 20px;
+    }
+
+    .nav-list {
+        gap: 16px;
+    }
+
+    .nav-list a {
+        font-size: 18px;
+    }
+}
+
+/* ----------------------------------------
+   Safe Area Insets (for notched devices)
+   ---------------------------------------- */
+@supports (padding: max(0px)) {
+    .header {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+
+    .whatsapp {
+        right: max(16px, env(safe-area-inset-right));
+        bottom: max(16px, env(safe-area-inset-bottom));
+    }
+
+    @media (max-width: 576px) {
+        .header-container {
+            padding-left: max(16px, env(safe-area-inset-left));
+            padding-right: max(16px, env(safe-area-inset-right));
+        }
+    }
+}
+
+/* ----------------------------------------
+   Print Styles
+   ---------------------------------------- */
+@media print {
+    .marquee,
+    .whatsapp,
+    .menu-toggle,
+    .nav {
+        display: none !important;
+    }
+
+    .hero-circle {
+        display: none;
+    }
+
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .servico-card,
+    .sobre-card,
+    .avaliacao-card {
+        break-inside: avoid;
     }
 }

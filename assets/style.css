@@ -919,3 +919,183 @@ img {
     width: 32px;
     height: 32px;
 }
+
+/* ----------------------------------------
+   Footer
+   ---------------------------------------- */
+.footer {
+    background-color: #0d0c0d;
+    padding: 80px 0 0;
+    border-top: 1px solid rgba(254, 254, 254, 0.1);
+}
+
+.footer-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 320px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(254, 254, 254, 0.1);
+}
+
+/* Footer - Coluna da Logo/Sobre */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: rgba(254, 254, 254, 0.8);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-social-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.footer-social-btn.facebook {
+    background-color: #1877F2;
+}
+
+.footer-social-btn.whatsapp-btn {
+    background-color: #25D366;
+}
+
+.footer-social-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Footer - Colunas de Links */
+.footer-column h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fefefe;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #812328;
+    border-radius: 2px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: rgba(254, 254, 254, 0.7);
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #812328;
+    padding-left: 5px;
+}
+
+/* Footer - Contato */
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.footer-contact-item svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: #812328;
+    margin-top: 2px;
+}
+
+.footer-contact-item p,
+.footer-contact-item a {
+    font-size: 14px;
+    color: rgba(254, 254, 254, 0.7);
+    line-height: 1.5;
+}
+
+.footer-contact-item a:hover {
+    color: #812328;
+}
+
+/* Footer - Bottom */
+.footer-bottom {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-copyright {
+    font-size: 13px;
+    color: rgba(254, 254, 254, 0.5);
+}
+
+.footer-copyright a {
+    color: #812328;
+    font-weight: 500;
+}
+
+.footer-copyright a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-bottom-links a {
+    font-size: 13px;
+    color: rgba(254, 254, 254, 0.5);
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #812328;
+}

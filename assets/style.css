@@ -226,23 +226,10 @@ img {
 .hero-buttons {
     display: flex;
     gap: 16px;
+    align-items: center;
 }
 
-.btn-outline {
-    background-color: transparent;
-    color: #fefefe;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 14px 28px;
-    border-radius: 8px;
-    border: 2px solid #fefefe;
-    transition: all 0.3s ease;
-}
 
-.btn-outline:hover {
-    background-color: #fefefe;
-    color: #070607;
-}
 
 /* Hero Image */
 .hero-image {

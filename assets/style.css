@@ -105,18 +105,24 @@ img {
     position: relative;
 }
 
-.nav-list a:hover {
-    color: #812328;
-}
-
-.nav-list a.active::after {
+.nav-list a::after {
     content: '';
     position: absolute;
     bottom: -6px;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    width: 0;
     height: 2px;
     background-color: #812328;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+.nav-list a.active::after {
+    width: 100%;
 }
 
 /* Header Button */
@@ -392,7 +398,43 @@ img {
     font-size: 20px;
     font-weight: 700;
     color: #812328;
+    margin-bottom: 12px;
+}
+
+/* Service Card Icons */
+.servico-icons {
+    display: flex;
+    gap: 12px;
     margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(129, 35, 40, 0.15);
+}
+
+.servico-icon {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(129, 35, 40, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.servico-icon:hover {
+    background-color: #812328;
+    transform: translateY(-2px);
+}
+
+.servico-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: #812328;
+    transition: fill 0.3s ease;
+}
+
+.servico-icon:hover svg {
+    fill: #fefefe;
 }
 
 .servico-card-content ul {
@@ -621,6 +663,75 @@ img {
     font-size: 13px;
     font-weight: 500;
     border-radius: 4px;
+}
+
+/* ----------------------------------------
+   Nossos Trabalhos (Gallery) Section
+   ---------------------------------------- */
+.trabalhos {
+    padding: 80px 0;
+    background-color: #070607;
+}
+
+.trabalhos-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 320px;
+}
+
+.trabalhos-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.trabalhos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 12px;
+}
+
+.trabalho-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #1a1a1a;
+}
+
+.trabalho-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.trabalho-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 50%, rgba(129, 35, 40, 0.4));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.trabalho-item:hover img {
+    transform: scale(1.05);
+}
+
+.trabalho-item:hover::after {
+    opacity: 1;
+}
+
+.trabalho-small {
+    height: 220px;
+}
+
+.trabalho-large {
+    grid-column: 1 / -1;
+    height: 350px;
 }
 
 /* ----------------------------------------

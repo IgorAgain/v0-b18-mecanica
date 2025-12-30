@@ -1986,3 +1986,345 @@
         break-inside: avoid;
     }
 }
+
+
+/* ========================================
+   Parceria Section - Responsive CSS
+   ======================================== */
+
+/* ----------------------------------------
+   Large Desktop (max-width: 1600px)
+   ---------------------------------------- */
+@media (max-width: 1600px) {
+    .parceria-container {
+        max-width: 1300px;
+        padding: 0 40px;
+        gap: 60px;
+    }
+
+    .parceria-content h2 {
+        font-size: 32px;
+    }
+
+    .parceria-content h3 {
+        font-size: 24px;
+    }
+}
+
+/* ----------------------------------------
+   Desktop (max-width: 1400px)
+   ---------------------------------------- */
+@media (max-width: 1400px) {
+    .parceria {
+        padding: 70px 0;
+    }
+
+    .parceria-container {
+        max-width: 1100px;
+        padding: 0 30px;
+        gap: 50px;
+    }
+
+    .parceria-content h2 {
+        font-size: 28px;
+    }
+
+    .parceria-content h3 {
+        font-size: 22px;
+    }
+
+    .parceria-content p {
+        font-size: 15px;
+    }
+
+    .parceria-logo-wrapper {
+        padding: 20px 28px;
+        min-width: 140px;
+        min-height: 100px;
+    }
+
+    .parceria-logo {
+        max-width: 100px;
+        max-height: 70px;
+    }
+
+    .parceria-plus {
+        font-size: 40px;
+    }
+}
+
+/* ----------------------------------------
+   Large Tablet (max-width: 1200px)
+   ---------------------------------------- */
+@media (max-width: 1200px) {
+    .parceria {
+        padding: 60px 0;
+    }
+
+    .parceria-container {
+        padding: 0 24px;
+        gap: 40px;
+    }
+
+    .parceria-content {
+        max-width: 500px;
+    }
+
+    .parceria-content h2 {
+        font-size: 26px;
+    }
+
+    .parceria-content h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .parceria-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .parceria-logos {
+        gap: 24px;
+    }
+
+    .parceria-logo-wrapper {
+        padding: 18px 24px;
+        min-width: 120px;
+        min-height: 90px;
+        border-radius: 12px;
+    }
+
+    .parceria-logo {
+        max-width: 90px;
+        max-height: 60px;
+    }
+
+    .parceria-plus {
+        font-size: 36px;
+    }
+
+    .logo-placeholder {
+        font-size: 12px;
+    }
+}
+
+/* ----------------------------------------
+   Tablet (max-width: 992px)
+   ---------------------------------------- */
+@media (max-width: 992px) {
+    .parceria {
+        padding: 50px 0;
+    }
+
+    .parceria-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .parceria-content {
+        max-width: 100%;
+    }
+
+    .parceria-content h2 {
+        font-size: 24px;
+    }
+
+    .parceria-content h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .parceria-content p {
+        font-size: 14px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .parceria-logos {
+        justify-content: center;
+    }
+
+    .parceria-logo-wrapper {
+        padding: 16px 20px;
+        min-width: 110px;
+        min-height: 80px;
+    }
+
+    .parceria-logo {
+        max-width: 80px;
+        max-height: 55px;
+    }
+
+    .parceria-plus {
+        font-size: 32px;
+    }
+
+    /* Elementos decorativos menores */
+    .parceria::before {
+        width: 300px;
+        height: 300px;
+        right: -15%;
+    }
+
+    .parceria::after {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* ----------------------------------------
+   Large Mobile (max-width: 768px)
+   ---------------------------------------- */
+@media (max-width: 768px) {
+    .parceria {
+        padding: 45px 0;
+    }
+
+    .parceria-container {
+        gap: 32px;
+        padding: 0 16px;
+    }
+
+    .parceria-content h2 {
+        font-size: 22px;
+    }
+
+    .parceria-content h3 {
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+
+    .parceria-content p {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .parceria-logos {
+        gap: 20px;
+    }
+
+    .parceria-logo-wrapper {
+        padding: 14px 18px;
+        min-width: 100px;
+        min-height: 70px;
+        border-radius: 10px;
+    }
+
+    .parceria-logo {
+        max-width: 70px;
+        max-height: 50px;
+    }
+
+    .parceria-plus {
+        font-size: 28px;
+    }
+
+    .logo-placeholder {
+        font-size: 11px;
+    }
+
+    /* Ocultar elementos decorativos */
+    .parceria::before,
+    .parceria::after {
+        display: none;
+    }
+}
+
+/* ----------------------------------------
+   Mobile (max-width: 576px)
+   ---------------------------------------- */
+@media (max-width: 576px) {
+    .parceria {
+        padding: 40px 0;
+    }
+
+    .parceria-container {
+        gap: 28px;
+        padding: 0 16px;
+    }
+
+    .parceria-content h2 {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .parceria-content h3 {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .parceria-content p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .parceria-logos {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .parceria-logo-wrapper {
+        padding: 16px 24px;
+        min-width: 140px;
+        min-height: 80px;
+    }
+
+    .parceria-logo {
+        max-width: 80px;
+        max-height: 55px;
+    }
+
+    .parceria-plus {
+        font-size: 24px;
+        transform: rotate(90deg);
+    }
+}
+
+/* ----------------------------------------
+   Small Mobile (max-width: 360px)
+   ---------------------------------------- */
+@media (max-width: 360px) {
+    .parceria {
+        padding: 32px 0;
+    }
+
+    .parceria-container {
+        gap: 24px;
+        padding: 0 12px;
+    }
+
+    .parceria-content h2 {
+        font-size: 18px;
+    }
+
+    .parceria-content h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .parceria-content p {
+        font-size: 12px;
+    }
+
+    .parceria-logo-wrapper {
+        padding: 14px 20px;
+        min-width: 120px;
+        min-height: 70px;
+    }
+
+    .parceria-logo {
+        max-width: 70px;
+        max-height: 48px;
+    }
+
+    .parceria-plus {
+        font-size: 20px;
+    }
+
+    .logo-placeholder {
+        font-size: 10px;
+    }
+}
